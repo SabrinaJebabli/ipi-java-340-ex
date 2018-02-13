@@ -30,4 +30,5 @@ public interface BaseEmployeRepository<T extends Employe> extends PagingAndSorti
 
     @Query(value = "SELECT * FROM Employe WHERE salaire > (SELECT avg(e2.salaire) FROM Employe e2)", nativeQuery = true)
     List<T> findEmployePlusRiches();
+
 }

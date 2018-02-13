@@ -1,8 +1,10 @@
 package com.ipiecoles.java.java340.repository;
 
 import com.ipiecoles.java.java340.SpringWebApplication;
+import com.ipiecoles.java.java340.exception.EmployeException;
 import com.ipiecoles.java.java340.model.Commercial;
 import com.ipiecoles.java.java340.model.Employe;
+import com.ipiecoles.java.java340.model.maker.CommercialMaker;
 import org.assertj.core.api.Assertions;
 import org.joda.time.LocalDate;
 import org.junit.After;
@@ -28,7 +30,7 @@ public class EmployeRepositoryTest {
     Commercial pierreDurand,jeanJacques,jacquesDupond;
 
     @Before
-    public void setUp(){
+    public void setUp() throws EmployeException{
         employeRepository.deleteAll();
 
         pierreDurand = new Commercial("Durand","Pierre","C12345", new LocalDate(),
@@ -38,7 +40,8 @@ public class EmployeRepositoryTest {
         jacquesDupond = new Commercial("Dupond","Jacques","C12347", new LocalDate(),
                 1500d,0d,0);
 
-        pierreDurand = employeRepository.save(pierreDurand);
+        //pierreDurand = employeRepository.save(pierreDurand);
+        pierreDurand = employeRepository.save(CommercialMaker.aCommercial().withPrenom("test").build());
         jeanJacques = employeRepository.save(jeanJacques);
         jacquesDupond = employeRepository.save(jacquesDupond);
 
