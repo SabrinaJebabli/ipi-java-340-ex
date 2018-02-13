@@ -20,4 +20,5 @@ public class CommercialTest {
         //Then
         Assertions.assertThat(prime).isEqualTo(500d);
     }
+
 }
