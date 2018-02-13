@@ -40,8 +40,8 @@ public class EmployeRepositoryTest {
         jacquesDupond = new Commercial("Dupond","Jacques","C12347", new LocalDate(),
                 1500d,0d,0);
 
-        //pierreDurand = employeRepository.save(pierreDurand);
-        pierreDurand = employeRepository.save(CommercialMaker.aCommercial().withPrenom("test").build());
+        pierreDurand = employeRepository.save(pierreDurand);
+        //pierreDurand = employeRepository.save(CommercialMaker.aCommercial().withPrenom("test").build());
         jeanJacques = employeRepository.save(jeanJacques);
         jacquesDupond = employeRepository.save(jacquesDupond);
 
