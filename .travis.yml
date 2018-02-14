@@ -4,4 +4,4 @@ addons:
   sonarcloud:
     organization: "sabrinajebabli"
 
-script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.organization=sabrinajebabli-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Sabrina-Java340:master  -Dsonar.branch=master
+script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.organization=sabrinajebabli-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Sabrina-Java340  -Dsonar.branch=master
